@@ -11,10 +11,12 @@ My Weekly Updated OOP Project
 ## Getting Started
 
 ## Built With
+IntelliJ IDEA
 
 ## Contributing
 
 ## Author
+Jackson Turner
 
 ## License
 

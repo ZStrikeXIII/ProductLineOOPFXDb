@@ -33,6 +33,12 @@ public class Main extends Application {
     primaryStage.setTitle("JT Production Line");
     primaryStage.setScene(new Scene(root, 300, 275));
     primaryStage.show();
+    initializeDB();
+  }
+
+  private void initializeDB() {
+    final String JDBC_DRIVER = "org.h2.Driver";
+    final String DB_URL = "jdbc:h2:./res/ProductionDB";
   }
 
   public static void main(String[] args) {

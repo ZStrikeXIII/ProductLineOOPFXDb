@@ -1,6 +1,7 @@
 package sample;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -26,6 +27,8 @@ public class Controller {
     //Event Handler for "Add Product" Button
     try {
 
+      final String DB_URL = "jdbc:h2:./res/ProductionDB";
+      conn = DriverManager.getConnection(DB_URL);
       stmt = conn.createStatement();
       String sqlInsertProduct =
           "INSERT INTO Product(type, manufacturer, name) VALUES ( 'AUDIO', 'Apple', 'iPod' );";

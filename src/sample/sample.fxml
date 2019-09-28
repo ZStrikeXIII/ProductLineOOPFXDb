@@ -44,8 +44,8 @@
                     <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
                   </children>
                 </GridPane>
-                <Button layoutX="14.0" layoutY="104.0" mnemonicParsing="false" text="Add Product"
-                  onAction="#handleButtonAction"/>
+                <Button layoutX="14.0" layoutY="104.0" mnemonicParsing="false"
+                  onAction="#handleButtonAction" text="Add Product"/>
                 <Label layoutX="14.0" layoutY="138.0" text="Existing Products"/>
                 <TableView layoutX="114.0" layoutY="129.0" prefHeight="120.0" prefWidth="187.0">
                   <columns>
@@ -65,9 +65,9 @@
                 <Label layoutX="14.0" layoutY="14.0" text="Choose Product"/>
                 <ListView layoutX="110.0" layoutY="14.0" prefHeight="176.0" prefWidth="200.0"/>
                 <Label layoutX="14.0" layoutY="202.0" text="Choose Quantity"/>
-                <ComboBox layoutX="110.0" layoutY="198.0" prefWidth="150.0"/>
+                <ComboBox fx:id="chooseQuantity" layoutX="110.0" layoutY="198.0" prefWidth="150.0"/>
                 <Button layoutX="109.0" layoutY="223.0" mnemonicParsing="false"
-                  text="Record Production" onAction="#handleRecordButtonAction"/>
+                  onAction="#handleRecordButtonAction" text="Record Production"/>
               </children>
             </AnchorPane>
           </content>

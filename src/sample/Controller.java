@@ -4,7 +4,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 
 public class Controller {
 
@@ -29,5 +33,19 @@ public class Controller {
   public void handleRecordButtonAction(ActionEvent actionEvent) {
     //Event Handler for "Record Production" Button
     System.out.println("Production Recorded.");
+  }
+
+  ObservableList<String> numList =
+      FXCollections.observableArrayList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+
+  @FXML
+  private ComboBox chooseQuantity;
+
+  @FXML
+  private void initialize() {
+    //chooseQuantity.setValue("1");
+    chooseQuantity.setItems(numList);
+    chooseQuantity.setEditable(true);
+    chooseQuantity.getSelectionModel().selectFirst();
   }
 }

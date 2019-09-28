@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import org.h2.message.DbException;
 
 public class Controller {
 
@@ -37,6 +38,8 @@ public class Controller {
       conn.close();
     } catch (SQLException e) {
       e.printStackTrace();
+    } catch (DbException dBEX){
+      dBEX.printStackTrace();
     }
 
   }

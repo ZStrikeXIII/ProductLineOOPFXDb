@@ -15,12 +15,20 @@ public class Controller {
   Connection conn = null;
   Statement stmt = null;
 
+  /**
+   * The Event Handler for the "Add Product" Button.
+   *
+   * @param event This is the event that is activated when the button is pressed
+   * @throws Exception These are any problems that occur within the code
+   * @brief
+   */
   public void handleButtonAction(ActionEvent event) {
     //Event Handler for "Add Product" Button
     try {
 
       stmt = conn.createStatement();
-      String sqlInsertProduct = "INSERT INTO Product(type, manufacturer, name) VALUES ( 'AUDIO', 'Apple', 'iPod' );";
+      String sqlInsertProduct =
+          "INSERT INTO Product(type, manufacturer, name) VALUES ( 'AUDIO', 'Apple', 'iPod' );";
       ResultSet rs = stmt.executeQuery(sqlInsertProduct);
       stmt.close();
       conn.close();

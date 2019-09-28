@@ -12,10 +12,13 @@ import javafx.stage.Stage;
 
 
 /**
+ * This program is made to simulate a product line. Production be recorded, and products can be
+ * added.
+ *
  * @author Jackson Turner
  */
 
-public class Main<comboBox> extends Application {
+public class Main extends Application {
 
   /**
    * The "start" method is the starting point of a JavaFX program. This method sets the title.

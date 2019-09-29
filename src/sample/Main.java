@@ -32,14 +32,10 @@ public class Main extends Application {
     Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
     primaryStage.setTitle("JT Production Line");
     primaryStage.setScene(new Scene(root, 300, 275));
-    initializeDB();
+
     primaryStage.show();
   }
 
-  private void initializeDB() {
-    final String JDBC_DRIVER = "org.h2.Driver";
-    final String DB_URL = "jdbc:h2:./res/ProductionDB";
-  }
 
   public static void main(String[] args) {
     launch(args);

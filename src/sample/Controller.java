@@ -27,21 +27,27 @@ public class Controller {
   public void handleButtonAction(ActionEvent event) {
     //Event Handler for "Add Product" Button
     try {
-
+      initializeDB();
       final String DB_URL = "jdbc:h2:./res/ProductionDB";
       conn = DriverManager.getConnection(DB_URL);
       stmt = conn.createStatement();
       String sqlInsertProduct =
           "INSERT INTO Product(type, manufacturer, name) VALUES ( 'AUDIO', 'Apple', 'iPod' );";
-      ResultSet rs = stmt.executeQuery(sqlInsertProduct);
+      ResultSet rs = stmt.executeQuery(sqlInsertProduct); //Bugged twice for "Dead Store to rs"
+      stmt.executeUpdate(sqlInsertProduct);
       stmt.close();
       conn.close();
     } catch (SQLException e) {
       e.printStackTrace();
-    } catch (DbException dBEX){
-      dBEX.printStackTrace();
+    } catch (DbException dBEx) {
+      dBEx.printStackTrace();
     }
 
+  }
+
+  private void initializeDB() {
+    final String JDBC_DRIVER = "org.h2.Driver";
+    final String DB_URL = "jdbc:h2:./res/ProductionDB";
   }
 
   public void handleRecordButtonAction(ActionEvent actionEvent) {

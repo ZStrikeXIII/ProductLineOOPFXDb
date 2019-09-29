@@ -20,8 +20,9 @@ public class Controller {
   /**
    * The Event Handler for the "Add Product" Button.
    *
-   * @param event This is the event that is activated when the button is pressed
-   * @throws Exception These are any problems that occur within the code
+   * @param event This is the event that is activated when the button is pressed.
+   * @throws SQLException These are any SQL problems that occur within the code.
+   * @throws DbException  These are any Data Base problems that occur within the code.
    * @brief
    */
   public void handleButtonAction(ActionEvent event) {
@@ -33,7 +34,7 @@ public class Controller {
       stmt = conn.createStatement();
       String sqlInsertProduct =
           "INSERT INTO Product(type, manufacturer, name) VALUES ( 'AUDIO', 'Apple', 'iPod' );";
-      ResultSet rs = stmt.executeQuery(sqlInsertProduct); //Bugged twice for "Dead Store to rs"
+      ResultSet rs = stmt.executeQuery(sqlInsertProduct); //Bugged for "Dead Store to rs"
       stmt.executeUpdate(sqlInsertProduct);
       stmt.close();
       conn.close();

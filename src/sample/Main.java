@@ -40,4 +40,4 @@ public class Main extends Application {
     launch(args);
   }
 }
-//A special thank you to Kristy Low for her assistance in coding this project!
+//A special thank you to Kristy Low for helping me with some of the coding!

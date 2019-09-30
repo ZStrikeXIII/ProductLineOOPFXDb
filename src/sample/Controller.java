@@ -10,7 +10,14 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
-import org.h2.message.DbException;
+
+/**
+ * The Controller class holds almost all of the code that will be
+ * executed during this project, including event handling and
+ * connecting to the data base.
+ *
+ * @author Jackson Turner
+ */
 
 public class Controller {
 
@@ -22,33 +29,24 @@ public class Controller {
    *
    * @param event This is the event that is activated when the button is pressed.
    * @throws SQLException These are any SQL problems that occur within the code.
-   * @throws DbException  These are any Data Base problems that occur within the code.
    * @brief
    */
   public void handleButtonAction(ActionEvent event) {
     //Event Handler for "Add Product" Button
     try {
-      initializeDB();
+      final String JDBC_DRIVER = "org.h2.Driver";
       final String DB_URL = "jdbc:h2:./res/ProductionDB";
       conn = DriverManager.getConnection(DB_URL);
       stmt = conn.createStatement();
       String sqlInsertProduct =
-          "INSERT INTO Product(type, manufacturer, name) VALUES ( 'AUDIO', 'Apple', 'iPod' );";
-      ResultSet rs = stmt.executeQuery(sqlInsertProduct); //Bugged for "Dead Store to rs"
+          "INSERT INTO Product(type, manufacturer, name)" + " VALUES ( 'AUDIO', 'Apple', 'iPod' );";
+      //ResultSet rs = stmt.executeQuery(sqlInsertProduct); //Bugged for "Dead Store to rs"
       stmt.executeUpdate(sqlInsertProduct);
       stmt.close();
       conn.close();
     } catch (SQLException e) {
       e.printStackTrace();
-    } catch (DbException dBEx) {
-      dBEx.printStackTrace();
     }
-
-  }
-
-  private void initializeDB() {
-    final String JDBC_DRIVER = "org.h2.Driver";
-    final String DB_URL = "jdbc:h2:./res/ProductionDB";
   }
 
   public void handleRecordButtonAction(ActionEvent actionEvent) {

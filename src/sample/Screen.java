@@ -7,10 +7,11 @@ public class Screen implements ScreenSpec {
   int responsetime;
 
   /**
+   * The attributes of a screen to be used with a Movie Player product.
    *
-   * @param resolution
-   * @param refreshrate
-   * @param responsetime
+   * @param resolution   The resolution of the screen.
+   * @param refreshrate  The refresh rate of the screen.
+   * @param responsetime The response time of the screen.
    */
   public Screen(String resolution, int refreshrate, int responsetime) {
     this.resolution = resolution;

@@ -5,6 +5,14 @@ public class MoviePlayer extends Product implements MultimediaControl {
   private Screen newScreen;
   private MonitorType mt;
 
+  /**
+   * A class to store and display the information of a Movie Player product.
+   *
+   * @param nm        The name of the product.
+   * @param mnfct     The manufacturer of the product.
+   * @param newScreen The attributes of the screen the product has.
+   * @param mt        The type of monitor the product has.
+   */
   public MoviePlayer(String nm, String mnfct, Screen newScreen, MonitorType mt) {
     super(nm, mnfct, ItemType.VISUAL);
     this.newScreen = newScreen;

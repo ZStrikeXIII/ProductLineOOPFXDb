@@ -24,11 +24,12 @@ public class AudioPlayer extends Product implements MultimediaControl {
 
 
   /**
+   * A class to store and display the information of an Audio Player product.
    *
-   * @param name
-   * @param manufacturer
-   * @param supportedAudioFormats
-   * @param supportedPlaylistFormats
+   * @param name                     The name of the product.
+   * @param manufacturer             The manufacturer of the product.
+   * @param supportedAudioFormats    The product's supported audio formats.
+   * @param supportedPlaylistFormats The product's supported playlist formats.
    */
   public AudioPlayer(String name, String manufacturer, String supportedAudioFormats,
       String supportedPlaylistFormats) {
@@ -42,8 +43,9 @@ public class AudioPlayer extends Product implements MultimediaControl {
   }
 
   /**
+   * A method used to print a String of text that can be changed depending on the product selected.
    *
-   * @return
+   * @return A String is returned, using variables to fill in the necessary information
    */
   public String toString() {
     return "Name: " + name + "\n" + "Manufacturer: " + manufacturer + "\n" + "Type: " + type + "\n"

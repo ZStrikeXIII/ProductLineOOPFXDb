@@ -31,8 +31,9 @@ public class ProductionRecord {
    * An overloaded constructor for ProductionRecord, which creates the unique serial number, taking
    * into account the item count for the specific product.
    *
-   * @param productProduced
-   * @param i The item count for the product, used in the assignment of the serial number.
+   * @param productProduced The product produced to be used in the production record.
+   * @param i               The item count for the product, used in the assignment of the serial
+   *                        number.
    */
   public ProductionRecord(Product productProduced, int i) {
     this.serialNumber =
@@ -74,7 +75,9 @@ public class ProductionRecord {
   }
 
   /**
-   * @param productIdent
+   * The identifier of a specific product.
+   *
+   * @param productIdent The product's unique identifier to be used.
    */
   public ProductionRecord(int productIdent) {
     this.productionNumber = 0;

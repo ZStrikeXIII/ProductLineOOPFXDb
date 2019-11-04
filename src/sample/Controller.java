@@ -12,9 +12,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 
 /**
- * The Controller class holds almost all of the code that will be
- * executed during this project, including event handling and
- * connecting to the data base.
+ * The Controller class holds almost all of the code that will be executed during this project,
+ * including event handling and connecting to the data base.
  *
  * @author Jackson Turner
  */

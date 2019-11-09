@@ -28,6 +28,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Controller {
 
+  //FX ID set ups
   @FXML
   private TextField txtProdName;
 
@@ -61,9 +62,13 @@ public class Controller {
   @FXML
   private Button buttRecordProd;
 
+  @FXML
+  private ComboBox chooseQuantity;
+
   Connection conn = null;
   Statement stmt = null;
 
+  //Creating Observable List for the TableView
   private ObservableList<Product> productLine = FXCollections.observableArrayList();
 
 
@@ -81,9 +86,10 @@ public class Controller {
       final String DB_URL = "jdbc:h2:./res/ProductionDB";
       conn = DriverManager.getConnection(DB_URL);
       stmt = conn.createStatement();
-      String sqlInsertProduct =
+      String sqlInsertProduct = //Google Check has an error for this line I don't understand
           "INSERT INTO Product(type, manufacturer, name)" + " VALUES ( 'AUDIO', 'Apple', 'iPod' );";
 
+      //Setting up Table variables
       String name = txtProdName.getText();
 
       String manufacturer = txtManu.getText();
@@ -92,12 +98,18 @@ public class Controller {
 
       //String typeString = type.toString(); //Bugged for "Dead Store"
 
+      //Creating a new Product for the Table
       Product newProduct = new Widget(name, manufacturer, type);
 
+      //Adding new product
       productLine.add(newProduct);
 
+      //Adding product to Product tab's list
       listChooseProd.getItems().add(newProduct);
 
+      //tvProductLine.setItems(productLine);
+
+      //Setting the product's info in the Production Log
       textSetter(newProduct);
 
       //ResultSet rs = stmt.executeQuery(sqlInsertProduct); //Bugged for "Dead Store to rs"
@@ -105,17 +117,26 @@ public class Controller {
       stmt.close();
       conn.close();
 
+      //Checking to see if product's type is stored or not due to unknown errors
       System.out.println(newProduct);
-
 
     } catch (SQLException e) {
       e.printStackTrace();
     }
   }
 
-  /*private void productLineSet() {
+  /**
+   * Method for setting up the Table View.
+   */
+  private void tvProdLineSetup() {
     colName.setCellValueFactory(new PropertyValueFactory<>("name"));
-  }*/
+
+    colManu.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
+
+    colType.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+    tvProductLine.setItems(productLine);
+  }
 
   /**
    * Event handler for when the "Record Production" Button is clicked by the user.
@@ -131,17 +152,23 @@ public class Controller {
     //textSetter(newProduct);
   }
 
-  public void textSetter(Product nP) {
-    String prodString = nP.toString();
+  /**
+   * A method to add a product's information to the Production Log.
+   *
+   * @param newProd The New Product's information to be added to the Production Log
+   */
+  public void textSetter(Product newProd) {
+    String prodString = newProd.toString();
     txtbxProdLog.appendText(prodString + "\n" /*+ "Quantity: " + chooseQuantity.getValue()*/);
   }
 
+  //List of numbers for the Product tab's Quantity Choice Box
   ObservableList<String> numList =
       FXCollections.observableArrayList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
-  @FXML
-  private ComboBox chooseQuantity;
-
+  /**
+   * Method to initialize multiple aspects of the program.
+   */
   @FXML
   private void initialize() {
     //chooseQuantity.setValue("1");
@@ -151,13 +178,15 @@ public class Controller {
 
     listChooseProd.getItems().addAll(productLine);
 
-    colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+    /*colName.setCellValueFactory(new PropertyValueFactory<>("name"));
 
     colManu.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
 
     colType.setCellValueFactory(new PropertyValueFactory<>("type"));
 
-    tvProductLine.setItems(productLine);
+    tvProductLine.setItems(productLine);*/
+
+    tvProdLineSetup();
 
     choiceItemType.getItems().addAll(ItemType.values());
   }

@@ -41,7 +41,7 @@ public abstract class Product implements Item {
 }
 
 
-class Widget extends Product {
+class Widget extends Product { //The Widget class here makes a Google Check error
 
   Widget(String name, String manufacturer, ItemType type) {
     super(name, manufacturer, type);

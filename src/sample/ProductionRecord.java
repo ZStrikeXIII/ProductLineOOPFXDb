@@ -23,7 +23,7 @@ public class ProductionRecord {
     this.productionNumber = productionNumber;
     this.productID = productID;
     this.serialNumber = serialNumber;
-    this.dateProduced = dateProduced;
+    this.dateProduced = dateProduced; //Bugged for code vulnerability
 
   }
 
@@ -67,11 +67,11 @@ public class ProductionRecord {
   }
 
   public Date getProdDate() {
-    return dateProduced;
+    return dateProduced; //Bugged for code vulnerability
   }
 
   public void setProdDate(Date dtProd) {
-    this.dateProduced = dtProd;
+    this.dateProduced = dtProd; //Bugged for code vulnerability
   }
 
   /**

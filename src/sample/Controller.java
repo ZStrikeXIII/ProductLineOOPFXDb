@@ -67,7 +67,6 @@ public class Controller {
   private ObservableList<Product> productLine = FXCollections.observableArrayList();
 
 
-
   /**
    * The Event Handler for the "Add Product" Button.
    *
@@ -85,13 +84,13 @@ public class Controller {
       String sqlInsertProduct =
           "INSERT INTO Product(type, manufacturer, name)" + " VALUES ( 'AUDIO', 'Apple', 'iPod' );";
 
-      ItemType type  = choiceItemType.getValue();
-
-      String typeString = type.code;
-
       String name = txtProdName.getText();
 
       String manufacturer = txtManu.getText();
+
+      ItemType type = choiceItemType.getValue();
+
+      //String typeString = type.toString(); //Bugged for "Dead Store"
 
       Product newProduct = new Widget(name, manufacturer, type);
 
@@ -99,10 +98,14 @@ public class Controller {
 
       listChooseProd.getItems().add(newProduct);
 
+      textSetter(newProduct);
+
       //ResultSet rs = stmt.executeQuery(sqlInsertProduct); //Bugged for "Dead Store to rs"
       stmt.executeUpdate(sqlInsertProduct);
       stmt.close();
       conn.close();
+
+      System.out.println(newProduct);
 
 
     } catch (SQLException e) {
@@ -110,9 +113,27 @@ public class Controller {
     }
   }
 
+  /*private void productLineSet() {
+    colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+  }*/
+
+  /**
+   * Event handler for when the "Record Production" Button is clicked by the user.
+   *
+   * @param actionEvent The actionEvent is the User clicking the button.
+   */
   public void handleRecordButtonAction(ActionEvent actionEvent) {
     //Event Handler for "Record Production" Button
     System.out.println("Production Recorded.");
+    Object quantity = chooseQuantity.getValue();
+    String quantString = quantity.toString();
+    txtbxProdLog.appendText("Quantity: " + quantString + "\n");
+    //textSetter(newProduct);
+  }
+
+  public void textSetter(Product nP) {
+    String prodString = nP.toString();
+    txtbxProdLog.appendText(prodString + "\n" /*+ "Quantity: " + chooseQuantity.getValue()*/);
   }
 
   ObservableList<String> numList =

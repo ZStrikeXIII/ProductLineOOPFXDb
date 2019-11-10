@@ -86,8 +86,13 @@ public class Controller {
       final String DB_URL = "jdbc:h2:./res/ProductionDB";
       conn = DriverManager.getConnection(DB_URL);
       stmt = conn.createStatement();
-      String sqlInsertProduct = //Google Check has an error for this line I don't understand
+      String sqlInsertProduct =
           "INSERT INTO Product(type, manufacturer, name)" + " VALUES ( 'AUDIO', 'Apple', 'iPod' );";
+
+      //ResultSet rs = stmt.executeQuery(sqlInsertProduct); //Bugged for "Dead Store to rs"
+      stmt.executeUpdate(sqlInsertProduct);
+      stmt.close();
+      conn.close();
 
       //Setting up Table variables
       String name = txtProdName.getText();
@@ -112,10 +117,7 @@ public class Controller {
       //Setting the product's info in the Production Log
       textSetter(newProduct);
 
-      //ResultSet rs = stmt.executeQuery(sqlInsertProduct); //Bugged for "Dead Store to rs"
-      stmt.executeUpdate(sqlInsertProduct);
-      stmt.close();
-      conn.close();
+
 
       //Checking to see if product's type is stored or not due to unknown errors
       System.out.println(newProduct);
@@ -126,7 +128,7 @@ public class Controller {
   }
 
   /**
-   * Method for setting up the Table View.
+   * Method for setting up the Table View's columns and contents.
    */
   private void tvProdLineSetup() {
     colName.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -139,7 +141,8 @@ public class Controller {
   }
 
   /**
-   * Event handler for when the "Record Production" Button is clicked by the user.
+   * Event handler for when the "Record Production" Button is clicked by the user, which will add
+   * the selected quantity to the Production Log's textbox.
    *
    * @param actionEvent The actionEvent is the User clicking the button.
    */

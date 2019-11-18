@@ -54,7 +54,7 @@ public class Controller {
   private TableColumn<?, ?> colManu;
 
   @FXML
-  public TableColumn<?, ?> colType;
+  private TableColumn<?, ?> colType;
 
   @FXML
   private ListView<Product> listChooseProd;
@@ -106,6 +106,8 @@ public class Controller {
       //Creating a new Product for the Table
       Product newProduct = new Widget(name, manufacturer, type);
 
+      tvProdLineSetup();
+
       //Adding new product
       productLine.add(newProduct);
 
@@ -116,8 +118,6 @@ public class Controller {
 
       //Setting the product's info in the Production Log
       textSetter(newProduct);
-
-
 
       //Checking to see if product's type is stored or not due to unknown errors
       System.out.println(newProduct);
@@ -165,6 +165,13 @@ public class Controller {
     txtbxProdLog.appendText(prodString + "\n" /*+ "Quantity: " + chooseQuantity.getValue()*/);
   }
 
+  private void loadProdList() {
+  }
+
+  private void loadProdLog() {
+    //textSetter(Product newProd);
+  }
+
   //List of numbers for the Product tab's Quantity Choice Box
   ObservableList<String> numList =
       FXCollections.observableArrayList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
@@ -192,5 +199,9 @@ public class Controller {
     tvProdLineSetup();
 
     choiceItemType.getItems().addAll(ItemType.values());
+
+    loadProdList();
+
+    loadProdLog();
   }
 }

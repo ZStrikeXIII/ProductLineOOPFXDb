@@ -1,5 +1,11 @@
 package sample;
 
+/**
+ * The main Product class that the majority of the program revolves around for data.
+ *
+ * @author Jackson
+ */
+
 public abstract class Product implements Item {
 
   //int id;

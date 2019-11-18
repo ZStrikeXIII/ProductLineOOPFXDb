@@ -1,5 +1,10 @@
 package sample;
 
+/**
+ * A class that has unique functionality for AudioPlayer products.
+ *
+ * @author Jackson
+ */
 public class AudioPlayer extends Product implements MultimediaControl {
 
   public void play() {

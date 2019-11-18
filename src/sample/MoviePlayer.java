@@ -1,5 +1,11 @@
 package sample;
 
+/**
+ * A class that contains all MoviePlayer specific functionality.
+ *
+ * @author Jackson
+ */
+
 public class MoviePlayer extends Product implements MultimediaControl {
 
   private Screen newScreen;

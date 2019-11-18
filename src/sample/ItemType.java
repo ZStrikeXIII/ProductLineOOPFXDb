@@ -1,5 +1,10 @@
 package sample;
 
+/**
+ * An Enum containing every ItemType we will use in the program.
+ *
+ * @author Jackson
+ */
 public enum ItemType {
   AUDIO("AU"),
   VISUAL("VI"),

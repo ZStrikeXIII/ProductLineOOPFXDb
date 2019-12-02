@@ -3,7 +3,7 @@ package sample;
 /**
  * A class that has unique functionality for AudioPlayer products.
  *
- * @author Jackson
+ * @author jbturner
  */
 public class AudioPlayer extends Product implements MultimediaControl {
 

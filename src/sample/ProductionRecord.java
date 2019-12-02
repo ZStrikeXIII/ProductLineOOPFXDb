@@ -6,7 +6,7 @@ import java.util.Date;
  * A class to assign every product a Production Number, a unique Product ID and Serial Number, as
  * well as the date it was produced.
  *
- * @author Jackson
+ * @author jbturner
  */
 
 public class ProductionRecord {

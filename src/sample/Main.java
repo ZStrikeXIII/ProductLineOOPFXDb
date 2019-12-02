@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  * This program is made to simulate a product line. Production be recorded, and products can be
  * added.
  *
- * @author Jackson Turner
+ * @author jbturner
  */
 
 public class Main extends Application {

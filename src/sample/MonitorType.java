@@ -3,7 +3,7 @@ package sample;
 /**
  * An Enum containing the two types of monitors.
  *
- * @author Jackson
+ * @author jbturner
  */
 public enum MonitorType {
   LCD, LED

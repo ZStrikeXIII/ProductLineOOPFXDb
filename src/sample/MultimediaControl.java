@@ -3,7 +3,7 @@ package sample;
 /**
  * An interface that contains all four commands to be used with various products of certain types.
  *
- * @author Jackson
+ * @author jbturner
  */
 public interface MultimediaControl {
 

@@ -3,7 +3,7 @@ package sample;
 /**
  * A class that contains all MoviePlayer specific functionality.
  *
- * @author Jackson
+ * @author jbturner
  */
 
 public class MoviePlayer extends Product implements MultimediaControl {

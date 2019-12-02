@@ -23,7 +23,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  * The Controller class holds almost all of the code that will be executed during this project,
  * including event handling and connecting to the data base.
  *
- * @author Jackson Turner
+ * @author jbturner
  */
 
 public class Controller {

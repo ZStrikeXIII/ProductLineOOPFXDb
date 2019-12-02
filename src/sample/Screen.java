@@ -3,7 +3,7 @@ package sample;
 /**
  * A class that holds the aspects of a Product's Screen, if it is of a Visual type.
  *
- * @author Jackson
+ * @author jbturner
  */
 
 public class Screen implements ScreenSpec {

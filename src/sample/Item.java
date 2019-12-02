@@ -3,7 +3,7 @@ package sample;
 /**
  * An interface that sets up the getters and setters for Items that will be used in the program.
  *
- * @author Jackson
+ * @author jbturner
  */
 
 public interface Item {

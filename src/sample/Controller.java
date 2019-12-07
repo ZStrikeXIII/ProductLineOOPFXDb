@@ -65,6 +65,18 @@ public class Controller {
   @FXML
   private ComboBox chooseQuantity;
 
+  @FXML
+  public TextField nameField;
+
+  @FXML
+  public TextField initialPassword;
+
+  @FXML
+  public Button genButton;
+
+  @FXML
+  public TextArea returnGensTextArea;
+
   Connection conn = null;
   Statement stmt = null;
 
@@ -176,6 +188,7 @@ public class Controller {
   ObservableList<String> numList =
       FXCollections.observableArrayList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
+
   /**
    * Method to initialize multiple aspects of the program.
    */
@@ -203,5 +216,19 @@ public class Controller {
     loadProdList();
 
     loadProdLog();
+  }
+
+  /**
+   * A method for the Employee tab to generate the Employee's username, password (if their desired
+   * password is invalid), and email, returned to them in a TextArea via a toString method from the
+   * Employee class.
+   *
+   * @param actionEvent The action event is the user clicking the button.
+   */
+  public void handleGenButtonAction(ActionEvent actionEvent) {
+    String name = nameField.getText();
+    String initPassword = initialPassword.getText();
+    Employee employ = new Employee(name, initPassword);
+    returnGensTextArea.setText(employ.toString());
   }
 }

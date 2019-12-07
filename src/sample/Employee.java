@@ -1,7 +1,5 @@
 package sample;
 
-import java.util.regex.*;
-
 /**
  * This class contains the information of employees, including their name, username and password.
  *

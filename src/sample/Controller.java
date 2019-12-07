@@ -90,7 +90,6 @@ public class Controller {
    *
    * @param event This is the event that is activated when the button is pressed.
    * @throws SQLException These are any SQL problems that occur within the code.
-   * @brief
    */
   public void handleButtonAction(ActionEvent event) {
     //Event Handler for "Add Product" Button
@@ -114,7 +113,7 @@ public class Controller {
 
       ItemType type = choiceItemType.getValue();
 
-      //String typeString = type.toString(); //Bugged for "Dead Store"
+      String typeString = type.toString(); //Bugged for "Dead Store"
 
       //Creating a new Product for the Table
       Product newProduct = new Widget(name, manufacturer, type);
@@ -162,7 +161,7 @@ public class Controller {
     System.out.println("Production Recorded.");
     Object quantity = chooseQuantity.getValue();
     String quantString = quantity.toString();
-    int quant = Integer.valueOf(quantString);
+    int quant = Integer.valueOf(quantString); //Bugged for Performance
     //Setting the product's info in the Production Log
     Product recordedProd = listChooseProd.getSelectionModel().getSelectedItem();
     for (i = quant; i >= 0; i--) {

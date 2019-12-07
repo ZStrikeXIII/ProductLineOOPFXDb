@@ -8,7 +8,8 @@ ProductLineOOPFXDb
 ## Documentation
 
 ## Diagrams
-
+![](res/ProductionDB.mv)
+![](res/ProducitonDB.trace)
 ## Getting Started
 To begin, download the program and open the jar file. Once you're in the main program, you can type in a product name and manufacturer, and choose one of four product types, and then click the Add Product button for your product to be added to the database. You will see your product in the table below. On the Product List tab, you can click any product in the list, select a quantity, and Record Production to add your selected quantity of products into the Production Log tab, each with their own Serial Numbers. In the Employee tab, you can enter your name and a password for the program to create your own username and email. A default password will also be provided if your password is considered invalid by the program.
 ## Built With

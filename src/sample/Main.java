@@ -25,7 +25,6 @@ public class Main extends Application {
    *
    * @param primaryStage This is the Primary Stage
    * @throws Exception These are any problems that occur within the code
-   * @brief
    */
   @Override
   public void start(Stage primaryStage) throws Exception {

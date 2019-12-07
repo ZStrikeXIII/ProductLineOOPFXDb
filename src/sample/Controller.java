@@ -89,7 +89,6 @@ public class Controller {
    * The Event Handler for the "Add Product" Button.
    *
    * @param event This is the event that is activated when the button is pressed.
-   * @throws SQLException These are any SQL problems that occur within the code.
    */
   public void handleButtonAction(ActionEvent event) {
     //Event Handler for "Add Product" Button

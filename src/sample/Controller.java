@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import javafx.scene.control.MultipleSelectionModel;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -128,9 +129,6 @@ public class Controller {
 
       //tvProductLine.setItems(productLine);
 
-      //Setting the product's info in the Production Log
-      textSetter(newProduct);
-
       //Checking to see if product's type is stored or not due to unknown errors
       System.out.println(newProduct);
 
@@ -160,11 +158,20 @@ public class Controller {
    */
   public void handleRecordButtonAction(ActionEvent actionEvent) {
     //Event Handler for "Record Production" Button
+    int i;
     System.out.println("Production Recorded.");
     Object quantity = chooseQuantity.getValue();
     String quantString = quantity.toString();
-    txtbxProdLog.appendText("Quantity: " + quantString + "\n");
-    //textSetter(newProduct);
+    int quant = Integer.valueOf(quantString);
+    //Setting the product's info in the Production Log
+    Product recordedProd = listChooseProd.getSelectionModel().getSelectedItem();
+    for (i = quant; i >= 0; i--) {
+      textSetter(recordedProd);
+      //ProductionRecord recordProd = new ProductionRecord();
+      String serialNum = recordedProd.manufacturer.substring(0, 3) + recordedProd.type.code + String
+          .format("%05d", i);
+      txtbxProdLog.appendText("Serial Number: " + serialNum + "\n");
+    }
   }
 
   /**

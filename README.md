@@ -8,8 +8,8 @@ ProductLineOOPFXDb
 ## Documentation
 [The Program's JavaDoc](ZStrikeXIII.github.io/ProductLineOOPFXDb/docs/index.html)
 ## Diagrams
-![](res/ProductionDB.mv)
-![](res/ProducitonDB.trace)
+![Diagram of a Product](PRODUCT.uml)
+![Diagram of the Production Record](PRODUCTIONRECORD.uml)
 ## Getting Started
 To begin, download the program and open the jar file. Once you're in the main program, you can type in a product name and manufacturer, and choose one of four product types, and then click the Add Product button for your product to be added to the database. You will see your product in the table below. On the Product List tab, you can click any product in the list, select a quantity, and Record Production to add your selected quantity of products into the Production Log tab, each with their own Serial Numbers. In the Employee tab, you can enter your name and a password for the program to create your own username and email. A default password will also be provided if your password is considered invalid by the program.
 ## Built With
@@ -22,7 +22,7 @@ You can contribute to this project by helping cut down on code while keeping its
 Jackson Turner
 
 ## License
-
+![The Program's License](src/License)
 ## Acknowledgments
 People Who Helped: Professor Scott Vanselow, Kristy Low, Nicholas Hansen
 Websites Utilized: Oracle, Stack Overflow. 

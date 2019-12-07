@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>d6eceed8-6367-4ade-b4af-0774422441cb.TABLE:PRODUCTIONDB.PUBLIC.PRODUCT</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">d6eceed8-6367-4ade-b4af-0774422441cb.TABLE:PRODUCTIONDB.PUBLIC.PRODUCT</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="85.0" y="58.5" />
+  <SelectedNodes>
+    <node>d6eceed8-6367-4ade-b4af-0774422441cb.TABLE:PRODUCTIONDB.PUBLIC.PRODUCT</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+

@@ -4,7 +4,7 @@ My Weekly Updated OOP Project
 ProductLineOOPFXDb
 
 ## Demonstration
-
+![A GIF of the Production List adding to the Production Log](res/ProgramGIF.gif)
 ## Documentation
 
 ## Diagrams

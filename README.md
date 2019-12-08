@@ -22,8 +22,8 @@ You can contribute to this project by helping cut down on code while keeping its
 ## License
 ![The Program's License](License)
 ## Acknowledgments
-People Who Helped: Professor Scott Vanselow, Kristy Low, Nicholas Hansen
-Websites Utilized: Oracle, Stack Overflow. 
+- People Who Helped: Professor Scott Vanselow, Kristy Low, Nicholas Hansen
+- Websites Utilized: Oracle, Stack Overflow. 
 ## History
 Since the Alpha submission, multiple classes have been added weekly as "Issues." Add Product functionality has been added that allows the product(s) to be seen in a table. The Produciton Log will now display the added product along with the selected quantity from the Production tab. As of the "Beta" submission, an Employee class has been added. The Production Log code has also undergone a major overhaul to make it work and display properly. This includes Serial Numbers being generated for each product added, and each product now displaying individually in the log.
 ## Key Programming Concepts Utilized

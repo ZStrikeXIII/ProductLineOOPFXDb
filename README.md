@@ -1,7 +1,5 @@
 # ProductLineOOPFXDb
-My Weekly Updated OOP Project
-## Project Title
-ProductLineOOPFXDb
+My Weekly Updated OOP Project, meant to simulate a Production Log where a user/employee would add products and record selected amounts of them. I created and coded this project independently, with some assistance from some classmates and the professor when I couldn't figure everything out on my own once in a while. This project started near the beginning of the semester, when I wasn't very proficient in Object Oriented Programming. As time went on, however, my skill in programming grew, culminating in the final product here, made to showcase what I've learned in my Object Oriented Programming class. This program was created at my home and in the classroom, where I had access to IntelliJ to code it. This program, as stated before, is meant to reflect all that I've learned in my Object Oriented Programming class, and I'm proud of how far its come since week one of class.
 
 ## Demonstration
 ![A GIF of the Production List adding to the Production Log](res/ProgramGIF.gif)

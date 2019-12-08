@@ -9,13 +9,13 @@ My Weekly Updated OOP Project, meant to simulate a Production Log where a user/e
 ![Diagram of a Product](src/Diagrams/PRODUCT.png)
 ![Diagram of the Production Record](src/Diagrams/PRODUCTIONRECORD.png)
 ## Getting Started
-To begin, download the program and open the jar file. Once you're in the main program, starting off in the Product Line tab, you can type in a product name and manufacturer, and choose one of four product types, and then click the Add Product button for your product to be added to the database. You will see your product in the table below. On the Production tab, you can click any product in the list, select a quantity, and Record Production to add your selected quantity of products into the Production Log tab, each with their own Serial Numbers. In the Employee tab, you can enter your name and a password for the program to create your own username and email. A default password will also be provided if your password is considered invalid by the program.
+To begin, download the program, extract the files, and find and open the .jar file. Once you're in the main program, starting off in the Product Line tab, you can type in a product name and manufacturer, and choose one of four product types, and then click the Add Product button for your product to be added to the database. You will see your product in the table below. On the Production tab, you can click any product in the list, select a quantity, and Record Production to add your selected quantity of products into the Production Log tab, each with their own Serial Numbers. In the Employee tab, you can enter your name and a password for the program to create your own username and email. A default password will also be provided if your password is considered invalid by the program once the button is pushed. The details of the employee will be displayed in a text area. Once you are done with the program, you can click the X in the top right of the window to close and end it.
 ## Built With
 IntelliJ IDEA
 SceneBuilder
 
 ## Contributing
-You can contribute to this project by helping cut down on code while keeping its functionality, so it is less cluttered and more orderly. You can also contribute by finding and fixing an unknown error that prevents a Product's Item Type from displaying in the Product Line tab once a Porudct is added.
+You can contribute to this project by helping cut down on code while keeping its functionality, so it is less cluttered and more orderly. You can also contribute by finding and fixing an unknown error that prevents a Product's Item Type from displaying in the Product Line tab once a Product is added.
 ## Author
 - Jackson Turner
 
@@ -25,7 +25,7 @@ You can contribute to this project by helping cut down on code while keeping its
 - People Who Helped: Professor Scott Vanselow, Kristy Low, Nicholas Hansen
 - Websites Utilized: Oracle, Stack Overflow. 
 ## History
-Since the Alpha submission, multiple classes have been added weekly as "Issues." Add Product functionality has been added that allows the product(s) to be seen in a table. The Produciton Log will now display the added product along with the selected quantity from the Production tab. As of the "Beta" submission, an Employee class has been added. The Production Log code has also undergone a major overhaul to make it work and display properly. This includes Serial Numbers being generated for each product added, and each product now displaying individually in the log.
+Since the Alpha submission, multiple classes have been added weekly as "Issues." Add Product functionality has been added that allows the product(s) to be seen in a table. The Produciton Log will now display the added product along with the selected quantity from the Production tab. As of the "Beta" submission, an Employee class has been added. The Production Log code has also undergone a major overhaul to make it work and display properly. This includes Serial Numbers being generated for each product added, and each product now displaying individually in the log. An Employee tab has also been added to show Regex functionality.
 ## Key Programming Concepts Utilized
 - Regular Expressions
 - Using SceneBuilder to make a GUI

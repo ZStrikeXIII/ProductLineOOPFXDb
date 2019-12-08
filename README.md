@@ -22,7 +22,7 @@ You can contribute to this project by helping cut down on code while keeping its
 Jackson Turner
 
 ## License
-![The Program's License](src/License)
+![The Program's License](License)
 ## Acknowledgments
 People Who Helped: Professor Scott Vanselow, Kristy Low, Nicholas Hansen
 Websites Utilized: Oracle, Stack Overflow. 

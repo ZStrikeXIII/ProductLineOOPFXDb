@@ -92,6 +92,7 @@ public class Employee {
   public boolean isValidPassword(String password) {
     boolean validity;
     if (password.matches("[a-z][A-Z][a-z]{2}[^a-zA-Z0-9]")) {
+      //Regular Expression to see if the user entered password is valid.
       validity = true;
     } else {
       validity = false;

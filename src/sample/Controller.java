@@ -2,6 +2,7 @@ package sample;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -98,8 +99,14 @@ public class Controller {
       conn = DriverManager.getConnection(DB_URL);
       stmt = conn.createStatement();
       String sqlInsertProduct =
-          "INSERT INTO Product(type, manufacturer, name)" + " VALUES ( 'AUDIO', 'Apple', 'iPod' );";
-
+          "INSERT INTO Product(type, manufacturer, name)" + " VALUES ( 'AUDIO', 'Apple', 'iPod');";
+      /*PreparedStatement productPreparation = conn.prepareStatement(sqlInsertProduct);
+      productPreparation.setString(1, txtProdName.getText());
+      productPreparation.setString(2, txtManu.getText());
+      ItemType type = choiceItemType.getValue();
+      String typeString = type.toString();
+      productPreparation.setString(3, typeString);
+      productPreparation.executeUpdate(sqlInsertProduct);*/
       //ResultSet rs = stmt.executeQuery(sqlInsertProduct); //Bugged for "Dead Store to rs"
       stmt.executeUpdate(sqlInsertProduct);
       stmt.close();

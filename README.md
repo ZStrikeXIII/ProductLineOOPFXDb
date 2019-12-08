@@ -6,7 +6,7 @@ ProductLineOOPFXDb
 ## Demonstration
 ![A GIF of the Production List adding to the Production Log](res/ProgramGIF.gif)
 ## Documentation
-[The Program's JavaDoc](ZStrikeXIII.github.io/ProductLineOOPFXDb/docs/index.html)
+[The Program's JavaDoc](https://zstrikexiii.github.io/ProductLineOOPFXDb/)
 ## Diagrams
 ![Diagram of a Product](src/Diagrams/PRODUCT.png)
 ![Diagram of the Production Record](src/Diagrams/PRODUCTIONRECORD.png)
